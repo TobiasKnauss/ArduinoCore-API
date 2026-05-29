@@ -44,7 +44,7 @@ class Print
 {
   private:
     int write_error;
-    size_t printNumber(unsigned long, uint16_t);
+    size_t printNumber(unsigned long, bool, size_t, uint16_t);
     size_t printULLNumber(unsigned long long, uint8_t);
     size_t printFloat(double, int);
   protected:
@@ -73,10 +73,12 @@ class Print
     size_t print(const String &);
     size_t print(const char[]);
     size_t print(char);
+    size_t print(         char, int);
+    size_t print(  signed char, int = DEC);
     size_t print(unsigned char, int = DEC);
-    size_t print(int, int = DEC);
-    size_t print(unsigned int, int = DEC);
-    size_t print(long, int = DEC);
+    size_t print(          int, int = DEC);
+    size_t print(unsigned  int, int = DEC);
+    size_t print(         long, int = DEC);
     size_t print(unsigned long, int = DEC);
     size_t print(long long, int = DEC);
     size_t print(unsigned long long, int = DEC);
@@ -87,10 +89,12 @@ class Print
     size_t println(const String &s);
     size_t println(const char[]);
     size_t println(char);
+    size_t println(         char, int);
+    size_t println(  signed char, int = DEC);
     size_t println(unsigned char, int = DEC);
-    size_t println(int, int = DEC);
-    size_t println(unsigned int, int = DEC);
-    size_t println(long, int = DEC);
+    size_t println(         int , int = DEC);
+    size_t println(unsigned int , int = DEC);
+    size_t println(         long, int = DEC);
     size_t println(unsigned long, int = DEC);
     size_t println(long long, int = DEC);
     size_t println(unsigned long long, int = DEC);
